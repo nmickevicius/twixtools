@@ -4,7 +4,7 @@ import numpy as np
 try: 
     from scipy.integrate import cumtrapz
 except:
-    import scipy.integrate.cumulative_trapezoid as cumtrapz
+    from scipy.integrate import cumulative_trapezoid as cumtrapz
 
 def to_freqdomain(data, x_in_timedomain=True, axis=-1):
     if not x_in_timedomain:
