@@ -1,6 +1,10 @@
 import numpy as np
-from scipy.integrate import cumtrapz
 
+# handling for different versions of scipy
+try: 
+    from scipy.integrate import cumtrapz
+except:
+    import scipy.integrate.cumulative_trapezoid as cumtrapz
 
 def to_freqdomain(data, x_in_timedomain=True, axis=-1):
     if not x_in_timedomain:
